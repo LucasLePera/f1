@@ -1,0 +1,152 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+}
+
+.body {
+
+    width: 100vw !important;
+    overflow-x: hidden;
+}
+
+.main {
+
+    padding: 20px;
+}
+
+.img-top {
+    width: 100vw;
+
+}
+.section {
+    width: 100vw;
+
+}
+.row {
+
+justify-content: center;
+}
+.navbar {
+
+    color: red;
+}
+
+
+.form{
+
+    width: 80vw;
+    background-color: rgba(28, 75, 176, 0.688);
+    margin: 0 auto;
+    border-radius: 1%;
+}
+
+.form{
+
+width: 80vw;
+background-color: rgba(28, 75, 176, 0.688);
+margin: 0 auto;
+border-radius: 1%;
+}
+
+.h1 {
+
+    text-align: center;
+}
+
+/* Cambiar de color al pulsar */
+.navbar a {
+    color: black;
+}
+
+.box-shadow {box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)}
+
+.navbar a:hover {
+    color: red;
+}
+
+.text-black {
+    color: black;
+}
+
+.form {
+
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.logo-f1-red {
+
+    height: 30px;
+
+}
+
+.footer {
+
+    align-content: center;
+    width: 100vw;
+
+}
+
+.carousel-circuitos {
+
+    align-content: center;
+    width: 100vw;
+    margin: 0 auto;
+
+}
+
+@media (min-width: 400px) {
+
+    
+.carousel-circuitos {
+
+    align-content: center;
+    width: 80vw;
+
+}
+
+.form{
+
+    width: 60vw;
+    }
+
+}
+
+@media (min-width: 600px) {
+
+    
+    .carousel-circuitos {
+    
+        align-content: center;
+        width: 50vw;
+    
+    }
+    
+    .form{
+
+        width: 40vw;
+    }
+}
+
+
+@media (min-width: 900px) {
+
+    
+    .carousel-circuitos {
+    
+        align-content: center;
+        width: 30vw;
+    
+    }
+
+    .form{
+
+        width: 30vw;
+    }
+    
+}
