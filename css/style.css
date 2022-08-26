@@ -10,11 +10,15 @@
 
     width: 100vw !important;
     overflow-x: hidden;
+
 }
 
-.main {
+a {
 
-    padding: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+
 }
 
 .img-top {
@@ -25,6 +29,9 @@
     width: 100vw;
 
 }
+
+.p { width: 100vw; margin: 0 auto;}
+
 .row {
 
 justify-content: center;
@@ -33,7 +40,6 @@ justify-content: center;
 
     color: red;
 }
-
 
 .form{
 
@@ -87,8 +93,37 @@ border-radius: 1%;
 
 .footer {
 
-    align-content: center;
     width: 100vw;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    font-size: 20px;
+    
+}
+
+
+/* Estilo de logos de redes para contacto*/
+.logo_facebook {
+
+    width: 50px;
+    height: 40px;
+
+}
+
+.logo_instagram {
+
+    width: 30px;
+    height: 30px;
+
+}
+.logo_twitter {
+
+    width: 30px;
+    height: 30px;
 
 }
 
@@ -99,6 +134,40 @@ border-radius: 1%;
     margin: 0 auto;
 
 }
+
+/*GRID FOOTER*/
+.container_footer {
+
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "red_social1"
+        "red_social2"
+        "red_social3";
+}
+
+.red_social1 {
+    grid-area: red_social1;
+    margin: auto;
+    
+}
+
+.red_social2 {
+    grid-area: red_social2;
+    margin: auto;
+}
+
+.red_social3 {
+    grid-area: red_social3;
+    margin: auto;
+}
+
+
 
 @media (min-width: 400px) {
 
@@ -117,6 +186,7 @@ border-radius: 1%;
 
 }
 
+
 @media (min-width: 600px) {
 
     
@@ -131,6 +201,33 @@ border-radius: 1%;
 
         width: 40vw;
     }
+
+
+    .container_footer {
+
+        display: grid;
+        width: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "red_social1 red_social2 red_social3";
+    }
+    
+    .red_social1 {
+        grid-area: red_social1;
+        
+    }
+    
+    .red_social2 {
+        grid-area: red_social2;
+    }
+    
+    .red_social3 {
+        grid-area: red_social3;
+    }
+    
 }
 
 
@@ -148,5 +245,6 @@ border-radius: 1%;
 
         width: 30vw;
     }
+
     
 }
