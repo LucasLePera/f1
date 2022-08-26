@@ -25,23 +25,33 @@ a {
     width: 100vw;
 
 }
+
 .section {
     width: 100vw;
 
 }
 
-.p { width: 100vw; margin: 0 auto;}
+.container {
+    width: 100vw;
+
+}
+
+.p {
+    width: 100vw;
+    margin: 0 auto;
+}
 
 .row {
 
-justify-content: center;
+    justify-content: center;
 }
+
 .navbar {
 
     color: red;
 }
 
-.form{
+.form {
 
     width: 80vw;
     background-color: rgba(28, 75, 176, 0.688);
@@ -49,12 +59,12 @@ justify-content: center;
     border-radius: 1%;
 }
 
-.form{
+.form {
 
-width: 80vw;
-background-color: rgba(28, 75, 176, 0.688);
-margin: 0 auto;
-border-radius: 1%;
+    width: 80vw;
+    background-color: rgba(28, 75, 176, 0.688);
+    margin: 0 auto;
+    border-radius: 1%;
 }
 
 .h1 {
@@ -67,7 +77,9 @@ border-radius: 1%;
     color: black;
 }
 
-.box-shadow {box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)}
+.box-shadow {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
 
 .navbar a:hover {
     color: red;
@@ -102,7 +114,7 @@ border-radius: 1%;
     justify-content: center;
     background-color: #333;
     font-size: 20px;
-    
+
 }
 
 
@@ -120,6 +132,7 @@ border-radius: 1%;
     height: 30px;
 
 }
+
 .logo_twitter {
 
     width: 30px;
@@ -139,7 +152,7 @@ border-radius: 1%;
 .container_footer {
 
     display: grid;
-    width: auto;
+    width: 100vw;
     height: auto;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -154,7 +167,6 @@ border-radius: 1%;
 .red_social1 {
     grid-area: red_social1;
     margin: auto;
-    
 }
 
 .red_social2 {
@@ -171,17 +183,17 @@ border-radius: 1%;
 
 @media (min-width: 400px) {
 
-    
-.carousel-circuitos {
 
-    align-content: center;
-    width: 80vw;
+    .carousel-circuitos {
 
-}
+        align-content: center;
+        width: 80vw;
 
-.form{
+    }
 
-    width: 60vw;
+    .form {
+
+        width: 60vw;
     }
 
 }
@@ -189,15 +201,15 @@ border-radius: 1%;
 
 @media (min-width: 600px) {
 
-    
+
     .carousel-circuitos {
-    
+
         align-content: center;
         width: 50vw;
-    
+
     }
-    
-    .form{
+
+    .form {
 
         width: 40vw;
     }
@@ -206,7 +218,7 @@ border-radius: 1%;
     .container_footer {
 
         display: grid;
-        width: auto;
+        width: 100vw;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         gap: 0px 0px;
@@ -214,37 +226,37 @@ border-radius: 1%;
         grid-template-areas:
             "red_social1 red_social2 red_social3";
     }
-    
+
     .red_social1 {
         grid-area: red_social1;
-        
+
     }
-    
+
     .red_social2 {
         grid-area: red_social2;
     }
-    
+
     .red_social3 {
         grid-area: red_social3;
     }
-    
+
 }
 
 
 @media (min-width: 900px) {
 
-    
+
     .carousel-circuitos {
-    
+
         align-content: center;
         width: 30vw;
-    
+
     }
 
-    .form{
+    .form {
 
         width: 30vw;
     }
 
-    
+
 }
