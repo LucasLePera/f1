@@ -229,15 +229,18 @@ a {
 
     .red_social1 {
         grid-area: red_social1;
+        width: 15px;
 
     }
 
     .red_social2 {
         grid-area: red_social2;
+        width: 15px;
     }
 
     .red_social3 {
         grid-area: red_social3;
+        width: 15px;
     }
 
 }
