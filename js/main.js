@@ -65,7 +65,7 @@ if (consultaCalcularNumero.toUpperCase() === "NO") {
     else if (dorsal === 18) {
         alert(`${datoCurioso} Lance Stroll`)
     }
-    else if (dorsal = 20) {
+    else if (dorsal === 20) {
         alert(`${datoCurioso} Kevin Magnussen`)
     }
     else if (dorsal === 21) {
