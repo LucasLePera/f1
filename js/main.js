@@ -33,72 +33,77 @@ if (consultaCalcularNumero.toUpperCase() === "NO") {
 } else if (consultaCalcularNumero.toUpperCase() === "SI") {
     alert("Genial, vamos a averiguarlo.")
     let nacimiento = prompt("¿Qué día naciste?");
-    let dorsal = (nacimiento * 3) - 2;
+
+    function dorsal(){
+        const numeroDorsal = (nacimiento*3)-2;
+        alert(`tu dorsal es ${numeroDorsal}`)
+    }
+
+    dorsal()
     if (nacimiento > 31) {
         alert("Solo el día debes decirme")
     }
     if (nacimiento <= 31) {
-        alert(`${usuario}, tu dorsal es ${dorsal}`)
+        alert(`${usuario}, tu dorsal es ${numeroDorsal}`)
     }
-    let datoCurioso = "Dato curioso, compartis dorsal con"
-    if (dorsal === 1) {
+    if (numeroDorsal === 1) {
         alert(`${datoCurioso} Max Verstappen`)
     }
-    else if (dorsal === 2) {
+    else if (numeroDorsal === 2) {
         alert(`${datoCurioso} Logan Sargeant`)
     }
-    else if (dorsal === 4) {
+    else if (numeroDorsal === 4) {
         alert(`${datoCurioso} Lando Norris`)
     }
-    else if (dorsal === 10) {
+    else if (numeroDorsal === 10) {
         alert(`${datoCurioso} Pierre Gasly`)
     }
-    else if (dorsal === 11) {
+    else if (numeroDorsal === 11) {
         alert(`${datoCurioso} Sergio Pérez`)
     }
-    else if (dorsal === 14) {
+    else if (numeroDorsal === 14) {
         alert(`${datoCurioso} Fernando Alonso`)
     }
-    else if (dorsal === 16) {
+    else if (numeroDorsal === 16) {
         alert(`${datoCurioso} Charles Leclerc`)
     }
-    else if (dorsal === 18) {
+    else if (numeroDorsal === 18) {
         alert(`${datoCurioso} Lance Stroll`)
     }
-    else if (dorsal === 20) {
+    else if (numeroDorsal === 20) {
         alert(`${datoCurioso} Kevin Magnussen`)
     }
     else if (dorsal === 21) {
         alert(`${datoCurioso} Nyck de Vries`)
     }
-    else if (dorsal === 22) {
+    else if (numeroDorsal === 22) {
         alert(`${datoCurioso} Yuki Tsunoda`)
     }
-    else if (dorsal === 23) {
+    else if (numeroDorsal === 23) {
         alert(`${datoCurioso} Alex Albon`)
     }
-    else if (dorsal === 24) {
+    else if (numeroDorsal === 24) {
         alert(`${datoCurioso} Guanyu Zhou`)
     }
-    else if (dorsal === 27) {
+    else if (numeroDorsal === 27) {
         alert(`${datoCurioso} Nico Hulkenberg`)
     }
-    else if (dorsal === 31) {
+    else if (numeroDorsal === 31) {
         alert(`${datoCurioso} Esteban Ocon`)
     }
-    else if (dorsal === 44) {
+    else if (numeroDorsal === 44) {
         alert(`${datoCurioso} Lewis Hamilton`)
     }
-    else if (dorsal === 55) {
+    else if (numeroDorsal === 55) {
         alert(`${datoCurioso} Carlos Sainz`)
     }
-    else if (dorsal === 63) {
+    else if (numeroDorsal === 63) {
         alert(`${datoCurioso} George Russell`)
     }
-    else if (dorsal === 77) {
+    else if (numeroDorsal === 77) {
         alert(`${datoCurioso} Valtteri Bottas`)
     }
-    else if (dorsal === 81) {
+    else if (numeroDorsal === 81) {
         alert(`${datoCurioso} Oscar Piastri`)
     }
 }
