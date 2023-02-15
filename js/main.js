@@ -43,7 +43,7 @@ if (consultaCalcularNumero.toUpperCase() === "NO") {
     if (nacimiento > 31) {
         alert("Solo el día debes decirme")
     }
-    if (nacimiento <= 31) {
+    else if (nacimiento <= 31) {
         alert(`${usuario}, tu dorsal es ${numeroDorsal}`)
     }
     if (numeroDorsal === 1) {
@@ -105,5 +105,45 @@ if (consultaCalcularNumero.toUpperCase() === "NO") {
     }
     else if (numeroDorsal === 81) {
         alert(`${datoCurioso} Oscar Piastri`)
+    }else{
+        alert(`Intenta nuevamente`)
     }
+}
+
+let voluntadCompra = prompt("¿Deseas comprar?");
+if (voluntadCompra.toUpperCase() === "SI") {
+
+let Merch = [
+    { id: 1, nombre: "Redbull", categoria: "Buzo", precio: 85 },
+    { id: 2, nombre: "Alpha Tauri", categoria: "Buzo", precio: 70 },
+    { id: 3, nombre: "Ferrari", categoria: "Buzo", precio: 80 },
+  ];
+  let filtrados;
+  
+  let filtro = prompt("¿Por qué deseas fitrar?");
+  
+  if (filtro === "precio") {
+    let precio = parseInt(prompt("Ingresa precio máximo (usd)"));
+  
+    filtrados = Merch.filter((item) => item.precio > precio);
+  } else if (filtro === "categoria") {
+    let categoria = prompt("¿Qué quieres comprar?");
+  
+    filtrados = Merch.filter((item) => item.categoria === categoria);
+  }
+
+  if (filtrados.length > 0) {
+    filtrados.forEach((item) => {
+      let mensaje = `
+       Id: ${item.id}
+       Nombre: ${item.nombre}
+       `;
+      alert(mensaje);
+    });
+  } else {
+    alert("De momento solo tenemos buzos");
+  }
+}
+if (voluntadCompra.toUpperCase() === "NO") {
+    alert("Bien, disfruta de las noticias");
 }
