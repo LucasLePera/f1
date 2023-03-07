@@ -2,8 +2,10 @@
 let usuario = prompt("Ingresa tu usuario");
 alert(`Bienvenido, ${usuario}. Este es el mejor sitio para fans de F1.`);
 
+let nombreUsuario = document.getElementById("usuario")
+nombreUsuario.innerHTML = usuario
 
-let voluntadCompra = prompt("¿Deseas comprar?");
+const voluntadCompra = prompt("¿Deseas comprar?");
 if (voluntadCompra.toUpperCase() === "SI") {
 
     let Merch = [
@@ -11,18 +13,15 @@ if (voluntadCompra.toUpperCase() === "SI") {
         { id: 2, nombre: "Alpha Tauri", categoria: "Buzo", precio: 70 },
         { id: 3, nombre: "Ferrari", categoria: "Buzo", precio: 80 },
     ];
-    let filtrados;
 
-    let filtro = prompt("¿Por qué deseas fitrar?");
+    const precioFiltrado = parseInt(prompt("Ingresa precio máximo (usd)"));
 
-    if (filtro === "precio") {
-        let precio = parseInt(prompt("Ingresa precio máximo (usd)"));
+    if(precioFiltrado <70) {
 
-        filtrados = Merch.filter((item) => item.precio > precio);
-    } else if (filtro === "categoria") {
-        let categoria = prompt("¿Qué quieres comprar?");
+        alert('No hay productos con esas características, intenta modificar el filtro.')
 
-        filtrados = Merch.filter((item) => item.categoria === categoria);
+    } else {
+        filtrados = Merch.filter((item) => item.precio > precioFiltrado);
     }
 
     if (filtrados.length > 0) {
@@ -34,10 +33,10 @@ if (voluntadCompra.toUpperCase() === "SI") {
             alert(mensaje);
         });
     } else {
-        alert("De momento solo tenemos buzos");
+        alert("Tu filtrado no ha encontrado productos, intenta con un monto más alto");
     }
-}
-else if (voluntadCompra.toUpperCase() === "NO") {
+
+} else if (voluntadCompra.toUpperCase() === "NO") {
     alert("Bien, disfruta de las noticias");
 }
 
@@ -65,6 +64,15 @@ if (notificacion.toUpperCase() === "SI") {
     }
 }
 
+const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+    },
+    buttonsStyling: false
+})
+
+
 let consultaCalcularNumero = prompt("¿Deseas saber cuál sería tu dorsal?");
 
 if (consultaCalcularNumero.toUpperCase() === "NO") {
@@ -73,8 +81,8 @@ if (consultaCalcularNumero.toUpperCase() === "NO") {
     alert("Genial, vamos a averiguarlo.")
     let nacimiento = prompt("¿Qué día naciste?");
 
-    function dorsal(){
-        const numeroDorsal = (nacimiento*3)-2;
+    function dorsal() {
+        const numeroDorsal = (nacimiento * 3) - 2;
         alert(`tu dorsal es ${numeroDorsal}`)
     }
 
@@ -87,3 +95,21 @@ if (consultaCalcularNumero.toUpperCase() === "NO") {
     }
 
 }
+
+const NewMerch = (categoria, precio) => {
+    let productos = JSON.parse(localStorage.getItem("productos"));
+
+    let producto = {
+        id: productos.length + 1,
+        categoria,
+        precio,
+    };
+
+    productos.push(producto);
+    localStorage.setItem("productos", JSON.stringify(productos));
+};
+
+let categoria = prompt("Ingrese el producto a agregar");
+let precio = parseInt(prompt("Ingrese el precio"));
+
+NewMerch(categoria, precio);
