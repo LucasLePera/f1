@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1 Fans</title>
+    <link rel="icon" type="imagen" href="https://logodownload.org/wp-content/uploads/2016/11/formula-1-logo-5-3.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/usuario.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="body-usuario">
+    <!-- Slider main container -->
+    <div class="card-login">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="https://logodownload.org/wp-content/uploads/2016/11/formula-1-logo-7.png" />
+            <h2>Bienvenido</h2>
+            <h3>¿Ya eres Fan de OnlyF1?</h3>
+            <input
+              spellcheck="false"
+              oninput="checkValid(event)"
+              type="text"
+              placeholder="Ingresa tu usuario"
+            />
+            <button disabled type="button" onclick="gotoSlide(1)">Siguiente</button>
+            <button type="submit"><a class="nav-link" href="/index.html">Cancelar</a></button>
+          </div>
+          <div class="swiper-slide">
+            <div className="image-wrapper">
+              <img src="/assets/usuario/pilotoSerio.png" />
+            </div>
+            <h2>Contraseña</h2>
+            <h3>Ingresa tu contraseña</h3>
+            <input
+              oninput="checkValid(event)"
+              type="password"
+              placeholder="Ingresa tu contraseña"
+            />
+            <button disabled type="button" onclick="gotoSlide(2)">Siguiente</button>
+          </div>
+          <div class="swiper-slide">
+            <div className="image-wrapper">
+              <img src="/assets/usuario/piloto.png" />
+            </div>
+            <h2>¡Genial!</h2>
+            <h3>Que bueno tenerte de nuevo</h3>
+            <button type="submit"><a class="nav-link" id="loginOk" href="/index.html">Confirmar</a></button>
+            <button class="secondary" onclick="restart()">Cerrar cesión</button>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/js/usuario.js"></script>
+
+  </body>
+</html>

@@ -1,9 +1,4 @@
 //pedido de nombre + saludo /// ${variable} entre backticks (``)
-let usuario = prompt("Ingresa tu usuario");
-alert(`Bienvenido, ${usuario}. Este es el mejor sitio para fans de F1.`);
-
-let nombreUsuario = document.getElementById("usuario")
-nombreUsuario.innerHTML = usuario
 
 const voluntadCompra = prompt("¿Deseas comprar?");
 if (voluntadCompra.toUpperCase() === "SI") {
@@ -63,15 +58,6 @@ if (notificacion.toUpperCase() === "SI") {
         }
     }
 }
-
-const swalWithBootstrapButtons = Swal.mixin({
-    customClass: {
-        confirmButton: 'btn btn-success',
-        cancelButton: 'btn btn-danger'
-    },
-    buttonsStyling: false
-})
-
 
 let consultaCalcularNumero = prompt("¿Deseas saber cuál sería tu dorsal?");
 
