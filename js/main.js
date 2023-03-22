@@ -1,5 +1,6 @@
 //pedido de nombre + saludo /// ${variable} entre backticks (``)
 
+
 const voluntadCompra = prompt("¿Deseas comprar?");
 if (voluntadCompra.toUpperCase() === "SI") {
 
@@ -28,7 +29,7 @@ if (voluntadCompra.toUpperCase() === "SI") {
             alert(mensaje);
         });
     } else {
-        alert("Tu filtrado no ha encontrado productos, intenta con un monto más alto");
+        alert("Tu filtrado no ha encontrado productos, intenta con otro monto");
     }
 
 } else if (voluntadCompra.toUpperCase() === "NO") {
