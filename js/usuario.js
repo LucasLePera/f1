@@ -30,13 +30,16 @@ const checkValid = (event) => {
 const loginOk = document.getElementById("loginOk")
   loginOk.addEventListener("click", () => {
     
-    setTimeout(() => {
     Swal.fire({
-      position: 'top-end',
+      position: 'center',
       icon: 'success',
       title: 'Iniciaste cesión con éxito',
       showConfirmButton: false,
       timer: 1500
       }, 2000);
-    });})
-
+      
+      setTimeout(() => {
+        location.href = "../index.html";
+    },3000);
+  
+  })

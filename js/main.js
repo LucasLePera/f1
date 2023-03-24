@@ -4,11 +4,43 @@
 const voluntadCompra = prompt("¿Deseas comprar?");
 if (voluntadCompra.toUpperCase() === "SI") {
 
-    let Merch = [
+    const Merch = [
         { id: 1, nombre: "Redbull", categoria: "Buzo", precio: 85 },
         { id: 2, nombre: "Alpha Tauri", categoria: "Buzo", precio: 70 },
         { id: 3, nombre: "Ferrari", categoria: "Buzo", precio: 80 },
     ];
+
+
+    const traerMerch = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(Merch);
+                reject("Error por favor intente luego!");
+            }, 4000);
+        });
+    };
+
+    traerMerch()
+        .then((response) => {
+            response.forEach((Merch) => {
+                let div = document.createElement("div");
+                div.innerHTML = `
+      <h2>ID: ${Merch.id}</h2>
+      <h3>ID: ${Merch.categoria}</h3>
+      <p>Nombre: ${Merch.nombre}</p>
+      <b>$${Merch.precio}</b>
+    `;
+
+                document.body.append(div);
+            });
+        })
+        .catch((error) => {
+            let div = document.createElement("div");
+            div.innerHTML = error;
+            document.body.append(div);
+        });
+
+        
 
     const precioFiltrado = parseInt(prompt("Ingresa precio máximo (usd)"));
 
