@@ -12,7 +12,7 @@ if (voluntadCompra.toUpperCase() === "SI") {
 
     const precioFiltrado = parseInt(prompt("Ingresa precio máximo (usd)"));
 
-    if(precioFiltrado <70) {
+    if (precioFiltrado < 70) {
 
         alert('No hay productos con esas características, intenta modificar el filtro.')
 
